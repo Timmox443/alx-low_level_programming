@@ -2,11 +2,11 @@
 
 /*
  * Here is our code
+ * Main is mandatory
  */
 
 int main(void)
 {
         puts("\"Programming is like building a multilingual puzzle");
         return (0);
-
 }
