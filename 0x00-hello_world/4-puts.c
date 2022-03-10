@@ -1,6 +1,8 @@
 #include <stdio.h>
 
-/* Main is our data entry point */
+/**
+ * Main is our data entry point 
+ */
 
 int main(void)
 {
