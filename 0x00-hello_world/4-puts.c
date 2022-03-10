@@ -5,7 +5,7 @@
  * Main is the entry point in this application
  */
 
-int main(void)
+int main(void) /*Mainnnn*/
 {
 	puts("\"Programming is like building a multilingual puzzle");
 	return (0);
