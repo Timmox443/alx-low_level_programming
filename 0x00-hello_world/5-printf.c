@@ -1,5 +1,8 @@
 #include <stdio.h>
-/* main MAIN Main */
+/* main - Entry point
+ *
+ * Return: Always 0 (Success)
+ */
 int main(void)
 {
 	/* another Main main MAIN */
