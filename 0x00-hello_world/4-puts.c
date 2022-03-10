@@ -1,12 +1,9 @@
 #include <stdio.h>
 
-/*
- * Here is our code
- * Main is mandatory
- */
+/* Main is our data entry point */
 
 int main(void)
 {
-        puts("\"Programming is like building a multilingual puzzle");
-        return (0);
+	puts("\"Programming is like building a multilingual puzzle");
+	return (0);
 }
