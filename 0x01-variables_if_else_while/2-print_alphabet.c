@@ -7,9 +7,11 @@
 int main(void)
 {
 	char abc;
-	for(abc='a';abc<='z';abc++)
+	abc = 'a';
+	while(abc<='z')
 	{
-		put(abc);
+		putchar(abc);
+		abc++;
 	}
 
 	return 0;
