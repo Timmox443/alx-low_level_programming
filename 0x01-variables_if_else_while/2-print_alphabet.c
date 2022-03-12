@@ -2,11 +2,11 @@
 /**
  * a to z program built by timmo in alx
  *
- * main - alphabet a to z
+ * main - Entry point for alphabet a to z
  *
  * function - We are using main fucntion
  *
- * Return - always zero after sucessful completion
+ * Return : always zero after sucessful completion
  */
 int main(void)
 {
