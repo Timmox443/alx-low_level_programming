@@ -32,7 +32,7 @@ int main(void)
 	{
 		printf("%d is negative\n", n);
 	}
-	else 
+	else
 		printf("Enter a valid value");
 
 	return (0);
