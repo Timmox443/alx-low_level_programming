@@ -1,13 +1,15 @@
 #include <stdio.h>
 /**
  * a to z program
+ *
+ * main - alphabet a to z
  */
-int main()
+int main(void)
 {
 	char abc;
 	for(abc='a';abc<='z';abc++)
 	{
-		printf(abc);
+		put(abc);
 	}
 
 	return 0;
