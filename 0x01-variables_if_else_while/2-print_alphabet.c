@@ -6,15 +6,14 @@
  */
 int main(void)
 {
-	char abc;
-	abc = 'a';
+	char abc = 'a';
 
 	while (abc <= 'z')
 	{
 		putchar(abc);
 		abc++;
 	}
-	putchar("/n");
+	putchar('/n');
 	
 	return (0);
 }
