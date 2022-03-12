@@ -1,8 +1,12 @@
 #include <stdio.h>
 /**
- * a to z program
+ * a to z program built by timmo in alx
  *
  * main - alphabet a to z
+ *
+ * function - We are using main fucntion
+ *
+ * Return - always zero after sucessful completion
  */
 int main(void)
 {
@@ -14,6 +18,5 @@ int main(void)
 		abc++;
 	}
 	putchar('\n');
-	
 	return (0);
 }
