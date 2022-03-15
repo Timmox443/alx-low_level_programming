@@ -1,14 +1,15 @@
 #include <stdio.h>
+#include "main.h"
 
 /**
  * 
  * printing a to z 10 times
- * main - check the code
+ * - check the code
  *
  * Return: Always 0.
  */
  
- void print(void)
+ void print_alphabet_x10(void)
  {
  	int i, abc;
 	
