@@ -9,14 +9,11 @@
  
  void print_alphabet(void)
  {
- 	int i, a;
+ 	int i;
  	
- 	for (i = 0; i <= 9; i++)
+ 	for (i = 97; i <= 122; i++)
  	{
- 		for (a = 97; a <= 122; a++)
- 		{
- 			putchar(a);
-		 }
+ 		putchar(i);
 	 }
 	 putchar('\n');
  }
