@@ -2,9 +2,8 @@
 #include <stdio.h>
 
 /**
- * main - check the code
- *
- * Return: Always 0.
+ * reset_to_98 - updates the value of the variable
+ * the pointer points to 98
  * @n : pointer to the variable to update
  */
 
