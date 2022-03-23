@@ -1,6 +1,6 @@
 # 0x06 
 ## More pointers, Arrays and String
-		### Tasks
+### Tasks
 Task 0:Write a function that concantenates two strings </br>
 Task 1:Write a function that concatenates two strings </br>
 Task 2:Write a function that copies a string </br>
