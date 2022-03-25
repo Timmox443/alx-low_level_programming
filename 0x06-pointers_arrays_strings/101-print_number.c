@@ -4,6 +4,7 @@
  * print_number - prints an integer.
  * @n: input integer.
  * Return: no return.
+ * _putchar 
  */
 void print_number(int n)
 {
