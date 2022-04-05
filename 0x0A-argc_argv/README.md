@@ -13,7 +13,9 @@ You should not remove the path before the name of the program
 All arguments should be printed, including the first one
 Only print one argument per line, ending with a new line
 </p>
-### Task 3. Write a program that multiplies two numbers. 
+
+### Task 3. Write a program that multiplies two numbers.
+
 <p align = "center">
 Your program should print the result of the multiplication, followed by a new line
 You can assume that the two numbers and result of the multiplication can be stored in an integer
