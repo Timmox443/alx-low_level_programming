@@ -1,4 +1,4 @@
-#0x0A. C - argc, argv </br>
+# 0x0A. C - argc, argv </br>
 ### Task 0.Write a program that prints its name, followed by a new line. </br>
 <p align = "Center">
 If you rename the program, it will print the new name, without having to compile it again
