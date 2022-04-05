@@ -1,6 +1,33 @@
+#include <string.h>
+
 #include "main.h"
 
-unsigned int _strspn(char *s __attribute__((unused)), char *accept __attribute__((unused)))
+
+
+/**
+ *
+ *  * _strspn - function that gets the length of a prefix substring
+ *
+ *   * @s: main string to be scanned
+ *
+ *    * @accept: string containing the number of bytes to match in s
+ *
+ *     * Return: the number of bytes in the initial segment of s
+ *
+ *      * which consist only of bytes from accept
+ *
+ *       */
+
+unsigned int _strspn(char *s, char *accept)
+
 {
-	return (0);
+
+	int n;
+
+
+
+	n = strspn(s, accept);
+
+	return (n);
+
 }
