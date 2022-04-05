@@ -1,5 +1,5 @@
 #include <stdio.h>
-
+#include <ctype.h>
 /**
  * main - program that adds positive numbers
  * @argc:count of arguments passed to program
