@@ -9,7 +9,7 @@
  **/
 void *_realloc(void *ptr, unsigned int num1, unsigned int num2)
 {
-	unsigned char *np;
+	unsigned char *mul;
 	unsigned int i;
 
 	if (num2 == num1)
@@ -26,26 +26,26 @@ void *_realloc(void *ptr, unsigned int num1, unsigned int num2)
 			return (NULL);
 		return (ptr);
 	}
-	np = malloc(num2 * sizeof(char));
-	if (np == NULL)
+	mul = malloc(num2 * sizeof(char));
+	if (mul == NULL)
 		return (NULL);
 	i = 0;
 	if (num2 > num1)
 	{
 		while (i < num1)
 		{
-			np[i] = ((char *)ptr)[i];
+			mul[i] = ((char *)ptr)[i];
 			i++;
 		}
 		free(ptr);
-		return (np);
+		return (mul);
 	}
 /* if num2 < num1 */
 	while (i < num2)
 	{
-		np[i] = ((char *)ptr)[i];
+		mul[i] = ((char *)ptr)[i];
 		i++;
 	}
 	free(ptr);
-	return (np);
+	return (mul);
 }
