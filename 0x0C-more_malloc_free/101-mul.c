@@ -1,38 +1,38 @@
 #include <stdlib.h>
-#include "holberton.h"
+#include "main.h"
 /**
  * *_realloc -  reallocates a memory block using malloc and free
  * @ptr: void pointer
- * @old_size: already allocated size
- * @new_size: new size to allocate
+ * @num1: already allocated size
+ * @num2: new size to allocate
  * Return: pointer to newly allocated memory or null
  **/
-void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
+void *_realloc(void *ptr, unsigned int num1, unsigned int num2)
 {
 	unsigned char *np;
 	unsigned int i;
 
-	if (new_size == old_size)
+	if (num2 == num1)
 		return (ptr);
-	if (new_size == 0 && ptr != NULL)
+	if (num2 == 0 && ptr != NULL)
 	{
 		free(ptr);
 		return (NULL);
 	}
 	if (ptr == NULL)
 	{
-		ptr = malloc(new_size * sizeof(void *));
+		ptr = malloc(num2 * sizeof(void *));
 		if (ptr == NULL)
 			return (NULL);
 		return (ptr);
 	}
-	np = malloc(new_size * sizeof(char));
+	np = malloc(num2 * sizeof(char));
 	if (np == NULL)
 		return (NULL);
 	i = 0;
-	if (new_size > old_size)
+	if (num2 > num1)
 	{
-		while (i < old_size)
+		while (i < num1)
 		{
 			np[i] = ((char *)ptr)[i];
 			i++;
@@ -40,8 +40,8 @@ void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 		free(ptr);
 		return (np);
 	}
-/* if new_size < old_size */
-	while (i < new_size)
+/* if num2 < num1 */
+	while (i < num2)
 	{
 		np[i] = ((char *)ptr)[i];
 		i++;
