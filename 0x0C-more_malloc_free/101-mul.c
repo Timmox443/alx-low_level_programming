@@ -1,93 +1,51 @@
-#include "main.h"
 #include <stdlib.h>
-
+#include "holberton.h"
 /**
- * _puts - prints a string, followed by a new line,
- * @str: pointer to the string to print
- * _putchar:print the output
- * Return: void
-*/
-
-
-void _puts(char *str)
+ * *_realloc -  reallocates a memory block using malloc and free
+ * @ptr: void pointer
+ * @old_size: already allocated size
+ * @new_size: new size to allocate
+ * Return: pointer to newly allocated memory or null
+ **/
+void *_realloc(void *ptr, unsigned int old_size, unsigned int new_size)
 {
-int i = 0;
-while (str[i])
-{
-	_putchar(str[i]);
-	i++;
-}
+	unsigned char *np;
+	unsigned int i;
 
-}
-
-/**
- * _atoi - convert a string to an integer.
- * @s: char type string
- * Return: integer converted
- */
-
-int _atoi(const char *s)
-{
-    int sign = 1;
-	unsigned long int resp = 0, firstNum, i;
-
-	for (firstNum = 0; !(s[firstNum] >= 48 && s[firstNum] <= 57); firstNum++)
+	if (new_size == old_size)
+		return (ptr);
+	if (new_size == 0 && ptr != NULL)
 	{
-		if (s[firstNum] == '-')
+		free(ptr);
+		return (NULL);
+	}
+	if (ptr == NULL)
+	{
+		ptr = malloc(new_size * sizeof(void *));
+		if (ptr == NULL)
+			return (NULL);
+		return (ptr);
+	}
+	np = malloc(new_size * sizeof(char));
+	if (np == NULL)
+		return (NULL);
+	i = 0;
+	if (new_size > old_size)
+	{
+		while (i < old_size)
 		{
-			sign *= -1;
+			np[i] = ((char *)ptr)[i];
+			i++;
 		}
+		free(ptr);
+		return (np);
 	}
-
-	for (i = firstNum; s[i] >= 48 && s[i] <= 57; i++)
+/* if new_size < old_size */
+	while (i < new_size)
 	{
-		resp *= 10;
-		resp += (s[i] - 48);
+		np[i] = ((char *)ptr)[i];
+		i++;
 	}
-
-	return (sign * resp);
-}
-
-/**
- * print_int - prints an integer.
- * @n: int
- * Return: 0
- */
-
-void print_int(unsigned long int n)
-{
-
-unsigned  long int divisor = 1, i, resp;
-
-for (i = 0; n / divisor > 9; i++, divisor *= 10)
-;
-
-for (; divisor >= 1; n %= divisor, divisor /= 10)
-{
-	resp = n / divisor;
-	_putchar('0' + resp);
-}
-
-}
-
-/**
- * main - print the result of the multiplication, followed by a new line
- * @argc: int
- * @argv: list
- * Return: 0
- */
-
-int main(int argc, char const *argv[])
-{
-(void)argc;
-
-if (argc != 3)
-{
-	_puts("Error ");
-	exit(98);
-}
-print_int(_atoi(argv[1]) * _atoi(argv[2]));
-_putchar('\n');
-
-return (0);
+	free(ptr);
+	return (np);
 }
